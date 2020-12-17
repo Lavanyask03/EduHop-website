@@ -51,10 +51,6 @@ h1 {
     margin: 0 5px;
 }
 
-.logo a:hover {
-    cursor: pointer;
-}
-
 .navbar a:hover {
     border-bottom: 2px #fff solid;
 }
@@ -130,7 +126,7 @@ h1 {
     margin: 15px;
 }
 
-.categories .card img {
+.categories .card img, .content .card img {
     border-radius: 5px;
     width: 300px;
     margin-bottom: 5px;
@@ -242,6 +238,40 @@ h1 {
 .stats .grid img {
     height: 200px;
     width: 200px;
+}
+
+/* COURSES PAGE */
+
+.content .card {
+    margin: 15px;
+    height: 100%;
+    width: 500px;
+}
+
+.content .flex {
+    flex-wrap: wrap;
+}
+
+.content .card img{
+    width: 100%;
+}
+
+.content .card i{
+    color: var(--secondary-color);
+}
+
+.content .card .btn{
+    margin-top: 5px;
+}
+
+.content .card .flex {
+    justify-content: space-between;
+}
+
+.content .price {
+    color: var(--dark-color);
+    font-size: 30px;
+    font-weight: bold;
 }
 
 /* FOOTER */
