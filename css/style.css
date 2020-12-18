@@ -136,6 +136,8 @@ h1 {
 
 .students .card {
     margin: 15px;
+    height: 100%;
+    width: 400px;
 }
 
 .students .card img {
@@ -280,6 +282,51 @@ footer a {
     color: white;
 }
 
-footer .container nav {
-    margin-left: 50px;
+/* MEDIA QUERIES */
+
+/* TABLETS */
+
+@media (max-width: 780px) {
+
+    .navbar {
+        height: 150px;
+        position: relative;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        background-color: var(--dark-color);
+        padding: 10px;
+    }
+
+    .grid, .showcase .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .showcase .grid-3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase .grid-3 > *:nth-child(2), .showcase .grid-3 > *:nth-child(3), .showcase .grid-3 > *:nth-child(4), .showcase .grid-3 > *:last-child {
+        grid-column: 1 / span 2;
+    }
+
+    .students .flex {
+        flex-wrap: wrap;
+    }
+
+    .hero-text {
+        font-size: 50px;
+    }
+
 }
