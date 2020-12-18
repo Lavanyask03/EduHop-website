@@ -100,9 +100,13 @@ h1 {
     margin-top: 80px;
 }
 
+.universities-companies .flex {
+    flex-wrap: wrap;
+}
+
 .universities-companies .container img {
     max-height: 70%;
-    width: 100%;
+    width: 150px;
 }
 
 /* LEARNER OUTCOMES */
@@ -286,7 +290,7 @@ footer a {
 
 /* TABLETS */
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
 
     .navbar {
         height: 150px;
@@ -305,11 +309,15 @@ footer a {
     .grid, .showcase .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        justify-content: center;
     }
 
     .showcase {
         height: auto;
-        padding-top: 10px;
+    }
+
+    .showcase-text {
+        text-align: center;
     }
 
     .showcase .grid-3 {
@@ -327,6 +335,20 @@ footer a {
 
     .hero-text {
         font-size: 50px;
+    }
+
+}
+
+/* MOBILES */
+
+@media (max-width:500px) {
+    .large, .hero-text {
+        font-size: 32px;
+    }
+
+    .stats .grid img {
+        height: 100px;
+        width: 100px;
     }
 
 }
