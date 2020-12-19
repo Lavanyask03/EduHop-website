@@ -1,3 +1,4 @@
+// hamburger menu
 const hamburger = document.getElementById('hamburger');
 const nav_ul = document.getElementById('nav-ul');
 
