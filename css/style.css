@@ -47,6 +47,7 @@ h1 {
 
 .navbar a {
     color: white;
+    text-transform: uppercase;
     padding: 10px;
     margin: 0 5px;
 }
@@ -65,6 +66,20 @@ h1 {
 
 .navbar .flex {
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hamburger {
+    background-color: transparent;
+    color: white;
+    display: none;
+    cursor: pointer;
+    border: none;
+    font-size: 30px;
+}
+
+.hamburger:focus {
+    outline: none;
 }
 
 /* SHOWCASE */
@@ -290,20 +305,36 @@ footer a {
 
 /* TABLETS */
 
-@media (max-width: 800px) {
+@media screen and (max-width: 880px) {
+
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #nav-ul {
+        display: none;
+        width: 100%;
+        background-color: var(--dark-color);
+        padding: 10px 20px;
+    }
+
+    #nav-ul.show {
+        display: flex;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
 
     .navbar {
-        height: 150px;
+        height: 140px;
         position: relative;
     }
 
-    .navbar .flex {
-        flex-direction: column;
-    }
-
-    .navbar ul {
-        background-color: var(--dark-color);
-        padding: 10px;
+    .navbar a {
+        margin: 0 8px;
     }
 
     .grid, .showcase .grid {
@@ -341,7 +372,24 @@ footer a {
 
 /* MOBILES */
 
-@media (max-width:500px) {
+@media screen and (max-width:500px) {
+
+    #nav-ul.show {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .navbar {
+        height: 100%;
+    }
+
+    .navbar a {
+        padding: 0;
+        margin: 8px 0px;
+    }
+
     .large, .hero-text {
         font-size: 32px;
     }
