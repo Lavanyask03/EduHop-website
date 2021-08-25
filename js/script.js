@@ -19,3 +19,20 @@ loginBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     modalEl.classList.remove('show-modal');
 })
+
+
+// index page
+// add categories using javascript
+const categories = ['Photography','Business','Art','Programming','Design','Music','Cooking','Law','Dance'];
+const categoriesEl = document.getElementById('categories');
+
+// map through categories array amd create a category element for each one
+categories.map((category) => {
+    let catEl = document.createElement('div');
+    catEl.innerHTML = `<div class="card category">
+                        <img src="images/categories/${category.toLowerCase()}.jpg" alt="">
+                        <h3>${category}</h3>
+                      </div>`;
+    // append catEl to categoriesEl
+    categoriesEl.appendChild(catEl);
+})
